@@ -1,0 +1,285 @@
+{
+	"compiler": {
+		"version": "0.8.6+commit.11564f7e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "enum Patient.GENDER",
+						"name": "_gender",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "_phone",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_email",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "generateUniqueHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getPatientInfo",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "enum Patient.GENDER",
+								"name": "gender",
+								"type": "uint8"
+							},
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "phone",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "email",
+										"type": "string"
+									}
+								],
+								"internalType": "struct Patient.ContractInfo",
+								"name": "contactInfo",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "year",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "month",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "day",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct Patient.Birthday",
+								"name": "birthday",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "insurance",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "insuranceID",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "insurancePhone",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "insuranceAddress",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "insuranceEmail",
+										"type": "string"
+									}
+								],
+								"internalType": "struct Patient.InsuranceInfo",
+								"name": "insurance",
+								"type": "tuple"
+							}
+						],
+						"internalType": "struct Patient.PatientInfo",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "requestForAppointment",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_insurance",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_insuranceID",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_insurancePhone",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_insuranceAddress",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_insuranceEmail",
+						"type": "string"
+					}
+				],
+				"name": "updateInsuranceInfo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "enum Patient.GENDER",
+						"name": "_gender",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "_phone",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_email",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_year",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_month",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_day",
+						"type": "uint256"
+					}
+				],
+				"name": "updateProfile",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Maruf Ahmed Robin",
+			"kind": "dev",
+			"methods": {},
+			"title": "Patient contract",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Patient.sol": "Patient"
+		},
+		"evmVersion": "berlin",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Patient.sol": {
+			"keccak256": "0x0f532052c4ca861fe5fa2ac2496b8c94601fbbf05f27d0b62bae1d1a1b31dda8",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://3249cd95241087de513a0892af7692a91b1d985cfc7027aade5857d283e4d383",
+				"dweb:/ipfs/QmVWREEEncXbcX3wDXfaq3nV1gozP2EjDmAdyMrWW157RM"
+			]
+		}
+	},
+	"version": 1
+}
